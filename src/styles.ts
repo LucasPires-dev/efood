@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from "styled-components";
 export const cores = {
     rosaClaro: "#FFEBD9",
     rosaEscuro: "#E66767",
+    fundo: "#FFF8F2",
     default: "#FFFFFF"
 
 }
@@ -13,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-family: "Roboto", serif;
-        background: ${cores.rosaClaro};
+        background: ${cores.fundo};
         color: ${cores.rosaEscuro};
         width: 100%;
    }
