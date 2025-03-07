@@ -4,12 +4,13 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 import Home from './pages/Home';
-import Restaurantes from './pages/Restaurantes';
+import Restaurantes from './Containers/Restaurantes';
 import GlobalStyle from './styles';
+import Cardapio from './pages/Cardapio';
 
 const router = createBrowserRouter([
   {path: '/', element: <Home />},
-  {path: 'restaurantes', element: <Restaurantes />} 
+  {path: 'restaurantes/:tipo', element: <Cardapio />} 
 ])
 
 const root = ReactDOM.createRoot(

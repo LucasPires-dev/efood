@@ -1,7 +1,7 @@
 import Footer from "../../Containers/Footer"
 import Header from "../../Containers/Header"
 import GlobalStyle from "../../styles"
-import Restaurantes from "../Restaurantes"
+import Restaurantes from "../../Containers/Restaurantes"
 
 const Home = () => {
     return(

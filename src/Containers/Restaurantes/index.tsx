@@ -1,28 +1,8 @@
 import { useEffect, useState } from "react"
-import CardRestaurante from "../../Containers/CardRestaurante"
-import Header from "../../Containers/Header"
+import CardRestaurante from "../CardRestaurante"
 import { ContainerMainRestaurante } from "./styles"
 import { Container } from "../../styles"
-
-type Pratos = {
-    id: number,
-    preco: number,
-    foto: string,
-    nome: string,
-    descricao: string,
-    porcao: string
-}
-
-type RestaurantesApi = {
-    id: number,
-    titulo: string,
-    destacado: boolean,
-    tipo: string,
-    avaliacao: number,
-    descricao: string,
-    capa: string,
-    cardapio: Pratos[],
-}
+import {RestaurantesApi} from "../../types"
 
 const Restaurantes = () => {
 
