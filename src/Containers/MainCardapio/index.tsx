@@ -7,18 +7,28 @@ import CardCardapio from "../CardCardapio";
 import HeroRestaurante from "../HeroRestaurante";
 
 const MainCardapio = () => {
-    type tipos = "italiana" | "árabe" | "japonês" | "português" | "pizzaria" | "vegano";
+    
+    type Tipos = "italiana" | "árabe" | "japonês" | "português" | "pizzaria" | "vegano";
 
-    const { tipo } = useParams() as { tipo?: tipos };
+    const { tipo } = useParams<{ tipo?: string }>(); // <--- Aceita string, pode ser inválido
 
-    const [tipoDoRestaurante, setTipoDoRestaurante] = useState<tipos>("italiana");
+    const tipoValido = (tipo: string | undefined): tipo is Tipos => {
+        return ["italiana", "árabe", "japonês", "português", "pizzaria", "vegano"].includes(tipo ?? "");
+    };
+
+    const [tipoDoRestaurante, setTipoDoRestaurante] = useState<Tipos>(
+        tipoValido(tipo) ? (tipo as Tipos) : "italiana"
+    );
+
     const [dadosCardapio, setDadosCardapio] = useState<RestaurantesApi | null>(null);
 
     useEffect(() => {
-        if (tipo) setTipoDoRestaurante(tipo);
+        if (tipoValido(tipo)) {
+            setTipoDoRestaurante(tipo as Tipos);
+        }
     }, [tipo]);
 
-    const tipoNumber = {
+    const tipoNumber: Record<Tipos, number> = {
         italiana: 1,
         árabe: 2,
         japonês: 3,
@@ -46,22 +56,24 @@ const MainCardapio = () => {
 
     return (
         <>
-            <HeroRestaurante urlImage={dadosCardapio ? dadosCardapio.capa: ""}/>
-            <ContainerCardapio>
-            <Container>
-                <Grids>
-                    {dadosCardapio &&
-                        dadosCardapio.cardapio.map((pratos: Pratos) => (
-                            <CardCardapio
-                                key={pratos.nome}
-                                urlImage={pratos.foto}
-                                description={pratos.descricao}
-                                title={pratos.nome}
-                            />
-                        ))}
-                </Grids>
-            </Container>
-        </ContainerCardapio>
+            <HeroRestaurante urlImage={dadosCardapio ? dadosCardapio.capa : ""} title={dadosCardapio ? dadosCardapio.titulo : ""}/>
+            <ContainerCardapio>                
+                <Container>
+                    <Grids>
+                        {dadosCardapio &&
+                            dadosCardapio.cardapio.map((pratos: Pratos) => (
+                                <CardCardapio
+                                    key={pratos.nome}
+                                    urlImage={pratos.foto}
+                                    description={pratos.descricao}
+                                    title={pratos.nome}
+                                    value={pratos.preco}
+                                    portion={pratos.porcao}
+                                />
+                            ))}
+                    </Grids>
+                </Container>
+            </ContainerCardapio>
         </>
     );
 };

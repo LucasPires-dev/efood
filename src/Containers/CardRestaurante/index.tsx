@@ -21,7 +21,7 @@ const CardRestaurante = ({urlImage, title, description, review, type, path, high
                         <Review>{review}<img src={StarReview}/></Review>
                     </BoxTitle>
                     <DescriptionCard>{description}</DescriptionCard>
-                    <Button href={`restaurantes/${path}`}>Saiba mais</Button>
+                    <Button to={`restaurantes/${path}`}>Saiba mais</Button>
                     <BoxInfo>
                         {highlighted && <Info>Destaque da semana</Info>}
                         <Info>{type}</Info>

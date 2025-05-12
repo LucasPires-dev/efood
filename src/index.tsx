@@ -4,7 +4,6 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 import Home from './pages/Home';
-import Restaurantes from './Containers/Restaurantes';
 import GlobalStyle from './styles';
 import Cardapio from './pages/Cardapio';
 

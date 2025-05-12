@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { cores } from "../../styles";
+import { Link } from "react-router-dom";
 
 export const CardContainer = styled.li`
-    width: 472px;
+
     border: 1px solid #E66767;
     background-color: ${cores.default};
     list-style: none;
@@ -16,7 +17,7 @@ export const CardContainer = styled.li`
 `
 
 export const Image = styled.img`
-    width: 472px;
+    width: 100%;
     height: 217px;
     border-radius: 4px 4px 0 0;
 `
@@ -56,7 +57,7 @@ export const DescriptionCard = styled.p`
     padding: 8px;
 `
 
-export const Button = styled.a`
+export const Button = styled(Link)`
     padding: 8px;
     text-decoration: none;
     color: ${cores.rosaClaro};
@@ -64,6 +65,7 @@ export const Button = styled.a`
     font-size: 14px;
     margin: 0 8px;
     border-radius: 8px;
+    cursor: pointer;
 
 `
 export const Info = styled.span`

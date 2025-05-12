@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { cores } from "../../styles";
+import { Link } from "react-router-dom";
 
 export const HeaderBar = styled.header`
     width: 100%;
@@ -12,7 +13,7 @@ export const Logo = styled.img`
     margin: 0 auto;
 
 `
-export const Nav = styled.a`
+export const Nav = styled(Link)`
     font-family: "Roboto";
     font-weight: 900;
     font-size: 18px;
@@ -41,6 +42,7 @@ export const InfoCarrinho = styled.span`
     line-height: 21.09px;
     letter-spacing: 0%;
     text-align: center;
+    cursor: pointer;
 
 `
 export const HeroText = styled.strong`
