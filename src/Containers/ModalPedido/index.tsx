@@ -301,7 +301,6 @@ const ModalPedido: React.FC<ModalPratosProps> = ({open, onClick: updateOpen}) =>
         onContinue={() => {
           finalizarPedido()
           setEtapa("mensagemPedidoCriado")
-          resetarForms()
         }}
         
         onBack={() => setEtapa("endereco")}
@@ -313,6 +312,7 @@ const ModalPedido: React.FC<ModalPratosProps> = ({open, onClick: updateOpen}) =>
           updateOpen(false);
           setEtapa("carrinho");
           setIdPedido('')
+          resetarForms()
           dispatch(limparCarrinho());
         }}
       />
