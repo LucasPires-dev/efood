@@ -64,6 +64,7 @@ const MainCardapio = () => {
                             dadosCardapio.cardapio.map((pratos: Pratos) => (
                                 <CardCardapio
                                     key={pratos.nome}
+                                    id={pratos.id}
                                     urlImage={pratos.foto}
                                     description={pratos.descricao}
                                     title={pratos.nome}

@@ -11,7 +11,6 @@ const Restaurantes = () => {
             const response = await fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes');
             const responseJson = await response.json();
             setRestaurantes(responseJson)
-            console.log (responseJson)
         }
         fethData()
     }, [])

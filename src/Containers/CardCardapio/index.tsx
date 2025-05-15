@@ -4,6 +4,7 @@ import { Button, CardContainer, DescriptionCard, Image, TextTitle } from "./styl
 
 
 interface Props {
+    id: number
     urlImage: string
     title: string
     description: string 
@@ -11,12 +12,12 @@ interface Props {
     value: number
 }
 
-const CardCardapio = ({urlImage, title, description, portion, value }: Props) =>{
+const CardCardapio = ({id, urlImage, title, description, portion, value }: Props) =>{
 
     const [modalOpen, setModalOpen] = useState(false)
     return(
             <>  
-                <ModalPratos title={title} description={description} urlImage={urlImage} open={modalOpen} onClick={setModalOpen} portion={portion} value={value}/>
+                <ModalPratos id={id} title={title} description={description} urlImage={urlImage} open={modalOpen} onClick={setModalOpen} portion={portion} value={value}/>
                 <CardContainer onClick={ () => setModalOpen(true)}>
                     <Image src={urlImage} />
                     <TextTitle>{title}</TextTitle>

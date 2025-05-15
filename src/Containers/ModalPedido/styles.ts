@@ -82,6 +82,13 @@ export const ModalButton = styled.button`
     width: 100%;
     box-sizing: border-box;
     margin-top: 8px;
+
+    &&:disabled {
+        background-color: #ccc;
+        color: #666;
+        cursor: not-allowed;
+        opacity: 0.7;
+    }
 `
 export const CardPrice = styled.div`
     background-color: ${cores.rosaEscuro};
@@ -100,7 +107,7 @@ export const CardPrice = styled.div`
         text-align: center;
 } 
 `
-export const Form = styled.form`
+export const InputsContaine = styled.div`
     width: 100%;
     box-sizing: border-box;
     display: grid;

@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import Home from './pages/Home';
 import GlobalStyle from './styles';
 import Cardapio from './pages/Cardapio';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 const router = createBrowserRouter([
   {path: '/', element: <Home />},
@@ -17,8 +19,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <GlobalStyle />
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 
