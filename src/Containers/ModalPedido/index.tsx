@@ -170,7 +170,7 @@ const ModalPedido: React.FC<ModalPratosProps> = ({open, onClick: updateOpen}) =>
           <div>
             <Label>CEP</Label>
             <Input
-              type="text"
+              type="number"
               value={endereco.numero}
               onChange={(e) => setEndereco({ ...endereco, numero: e.target.value })}
             />
@@ -178,7 +178,7 @@ const ModalPedido: React.FC<ModalPratosProps> = ({open, onClick: updateOpen}) =>
           <div>
             <Label>Número</Label>
             <Input
-              type="text"
+              type="number"
               value={endereco.complemento}
               onChange={(e) => setEndereco({ ...endereco, complemento: e.target.value })}
             />
@@ -224,7 +224,7 @@ const ModalPedido: React.FC<ModalPratosProps> = ({open, onClick: updateOpen}) =>
           <div>
             <Label>Número do cartão</Label>
             <Input
-              type="text"
+              type="number"
               value={pagamento.cartao}
               onChange={(e) => setPagamento({ ...pagamento, cartao: e.target.value })}
             />
@@ -232,7 +232,7 @@ const ModalPedido: React.FC<ModalPratosProps> = ({open, onClick: updateOpen}) =>
           <div>
             <Label>CVV</Label>
             <Input
-              type="text"
+              type="number"
               value={pagamento.cvv}
               onChange={(e) => setPagamento({ ...pagamento, cvv: e.target.value })}
             />
@@ -242,7 +242,7 @@ const ModalPedido: React.FC<ModalPratosProps> = ({open, onClick: updateOpen}) =>
           <div>
             <Label>Mês do vencimento</Label>
             <Input
-            type="text"
+            type="number"
             value={pagamento.mesValidade}
             onChange={(e) => setPagamento({ ...pagamento, mesValidade: e.target.value })}
           />
@@ -250,7 +250,7 @@ const ModalPedido: React.FC<ModalPratosProps> = ({open, onClick: updateOpen}) =>
           <div>
             <Label>Ano do vencimento</Label>
             <Input
-            type="text"
+            type="number"
             value={pagamento.anoValidade}
             onChange={(e) => setPagamento({ ...pagamento, anoValidade: e.target.value })}
           />
