@@ -38,6 +38,24 @@ const ModalPedido: React.FC<ModalPratosProps> = ({open, onClick: updateOpen}) =>
   cvv: '',
 });
 
+  const resetarForms = () => {
+    setEndereco({
+  destinatario: '',
+  cidade: '',
+  cep: '',
+  numero: '',
+  complemento: '',
+  rua: '', 
+})
+    setPagamento({
+  titular: '',
+  cartao: '',
+  mesValidade: '',
+  anoValidade: '',
+  cvv: '',
+})
+  }
+
 
   const finalizarPedido = async () => {
   try {
@@ -283,6 +301,7 @@ const ModalPedido: React.FC<ModalPratosProps> = ({open, onClick: updateOpen}) =>
         onContinue={() => {
           finalizarPedido()
           setEtapa("mensagemPedidoCriado")
+          resetarForms()
         }}
         
         onBack={() => setEtapa("endereco")}
