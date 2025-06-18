@@ -56,7 +56,7 @@ const MainCardapio = () => {
 
     return (
         <>
-            <HeroRestaurante urlImage={dadosCardapio ? dadosCardapio.capa : ""} title={dadosCardapio ? dadosCardapio.titulo : ""}/>
+            <HeroRestaurante urlImage={dadosCardapio ? dadosCardapio.capa : ""} title={dadosCardapio ? dadosCardapio.titulo : ""} typeRestaurante={dadosCardapio ? dadosCardapio.tipo : ""}/>
             <ContainerCardapio>                
                 <Container>
                     <Grids>

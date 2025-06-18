@@ -1,7 +1,7 @@
 import { Container } from "../../styles"
-import { Banner, BannerTitle, Filtro } from "./styles"
+import { Banner, BannerTitle, Filtro, TypeRestaurant } from "./styles"
 
-const HeroRestaurante = ({urlImage = "", title}:{urlImage: string, title: string}) => {
+const HeroRestaurante = ({urlImage = "", title, typeRestaurante}:{urlImage: string, title: string, typeRestaurante: string}) => {
     return(
         <>
            <Banner
@@ -14,8 +14,9 @@ const HeroRestaurante = ({urlImage = "", title}:{urlImage: string, title: string
             >
                 <Filtro >
                 <Container>
+                    <TypeRestaurant>{typeRestaurante}</TypeRestaurant>
                     <BannerTitle>{title}</BannerTitle>
-                    </Container>
+                </Container>
                 </Filtro>
             </Banner>
         </>

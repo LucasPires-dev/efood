@@ -10,7 +10,7 @@ export const ContainerCardapio = styled.section`
 export const Grids = styled.ul`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 480px;
+    grid-auto-rows: 338px;
     grid-gap: 24px;
     padding: 0;
 `

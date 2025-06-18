@@ -22,6 +22,7 @@ export const Nav = styled(Link)`
     text-align: center;
     text-decoration: none;
     color: ${cores.rosaEscuro};
+    text-align: left;
 `
 
 interface ContainerHeaderProps {
@@ -43,6 +44,7 @@ export const InfoCarrinho = styled.span`
     letter-spacing: 0%;
     text-align: center;
     cursor: pointer;
+    text-align: right;
 
 `
 export const HeroText = styled.strong`

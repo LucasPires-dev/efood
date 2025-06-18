@@ -9,6 +9,10 @@ export const Banner = styled.div`
 
 export const Filtro = styled(Banner)`
     background-color: rgba(0, 0, 0, 0.5);
+    div {
+        position: relative;
+        height: 280px;
+    }
 
 `
 export const BannerTitle = styled.strong`
@@ -20,4 +24,17 @@ export const BannerTitle = styled.strong`
     position: absolute;
     bottom: 32px;
     color: ${cores.default};
+    left: 0;
+    display: inline-block;
+`
+export const TypeRestaurant = styled.span`
+    display: inline-block;
+    font-family: Roboto;
+    font-weight: 100;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #fff;
+    margin-top: 32px;
+    text-transform: capitalize;
 `

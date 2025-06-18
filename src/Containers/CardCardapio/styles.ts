@@ -17,7 +17,6 @@ export const CardContainer = styled.li`
         transition: linear 0.2s;
     }
 `
-
 export const Image = styled.img`
         width: 100%;
         height: 167px;;
@@ -30,8 +29,7 @@ export const TextTitle = styled.p`
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
-
-       
+    margin: 12px 0;
 `
 
 export const DescriptionCard = styled.p`
@@ -40,6 +38,9 @@ export const DescriptionCard = styled.p`
     font-size: 14px;
     line-height: 22px;
     letter-spacing: 0%;
+    height: 60px;
+    overflow: hidden;
+    margin: 12px 0;
 `
 
 export const Button = styled.button`
